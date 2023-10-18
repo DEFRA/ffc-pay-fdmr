@@ -1,0 +1,8 @@
+{{- include "ffc-helm-library.deployment" (list . "ffc-pay-fdmr.deployment") -}}
+{{- define "ffc-pay-fdmr.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "ffc-helm-library.container" (list . "ffc-pay-fdmr.container") }}
+{{- end -}}
