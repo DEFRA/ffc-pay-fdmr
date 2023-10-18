@@ -1,6 +1,6 @@
 {
   "name": "ffc-pay-fdmr",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Transfer FDMR files",
   "homepage": "https://github.com/DEFRA/ffc-pay-fdmr",
   "main": "app/index.js",
@@ -14,11 +14,16 @@
     "start:debug": "nodemon --inspect-brk=0.0.0.0 --ext js --legacy-watch app/index.js"
   },
   "author": "Defra",
-  "contributors": [],
+  "contributors": [
+    "John Watson john.watson1@defra.gov.uk"
+  ],
   "license": "OGL-UK-3.0",
   "dependencies": {
-    "@hapi/hapi": "21.3.2",
-    "applicationinsights": "2.8.0"
+    "applicationinsights": "2.8.0",
+    "@azure/identity": "2.0.5",
+    "@azure/storage-blob": "12.13.0",
+    "@azure/storage-file-share": "12.9.0",
+    "log-timestamp": "0.3.0"
   },
   "devDependencies": {
     "jest": "29.7.0",
