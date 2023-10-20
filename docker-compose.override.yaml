@@ -12,3 +12,14 @@ services:
     volumes:
       - ./app:/home/node/app
       - ./package.json:/home/node/package.json
+    depends_on:
+      - ffc-pay-fdmr-azurite
+
+  ffc-pay-fdmr-azurite:
+    volumes:
+      - azurite_data:/data
+    ports:
+      - "11061:10000"
+
+volumes:
+  azurite_data:

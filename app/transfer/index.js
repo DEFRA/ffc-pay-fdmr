@@ -1,10 +1,10 @@
 const { transferConfig } = require('../config')
-const pollInbound = require('./poll-inbound')
+const { transferFiles } = require('./transfer-files')
 
 const start = async () => {
   try {
-    if (transferConfig.pollingActive) {
-      await pollInbound()
+    if (transferConfig.enabled) {
+      await transferFiles()
     }
   } catch (err) {
     console.error(err)
