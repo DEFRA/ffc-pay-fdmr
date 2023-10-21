@@ -1,5 +1,5 @@
 require('./insights').setup()
 require('log-timestamp')
-const polling = require('./transfer')
+const { start } = require('./transfer')
 
-module.exports = (async () => polling.start())()
+module.exports = (async () => start())()
