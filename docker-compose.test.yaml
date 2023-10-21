@@ -15,4 +15,4 @@ services:
       - ./jest.config.js:/home/node/jest.config.js
       - ./package.json:/home/node/package.json
     environment:
-      FDMR_STORAGE_CONNECTION_STRING: 'Test'
+      FDMR_STORAGE_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=fake;AccountKey=fake==;EndpointSuffix=core.windows.net
