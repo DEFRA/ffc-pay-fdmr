@@ -8,3 +8,15 @@ services:
     environment:
       APPINSIGHTS_CLOUDROLE: ffc-pay-fdmr-local
       APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+      AZURE_STORAGE_CONNECTION_STRING: DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://ffc-pay-fdmr-azurite:10000/devstoreaccount1;
+      AZURE_STORAGE_ACCOUNT_NAME: ${AZURE_STORAGE_ACCOUNT_NAME:-devstoreaccount1}
+      AZURE_STORAGE_USE_CONNECTION_STRING: "true"
+      AZURE_STORAGE_CREATE_CONTAINERS: "true"
+      FDMR_STORAGE_CONNECTION_STRING: ${FDMR_STORAGE_CONNECTION_STRING}
+      FDMR_STORAGE_SHARE_NAME: ${FDMR_STORAGE_SHARE_NAME:-fdmr}
+      FDMR_STORAGE_FOLDER_NAME: ${FDMR_STORAGE_FOLDER_NAME:-outbound}
+      POLLING_INTERVAL: ${POLLING_INTERVAL:-10000}
+
+  ffc-pay-fdmr-azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:3.23.0
+    command: "azurite-blob --loose --blobHost 0.0.0.0"
