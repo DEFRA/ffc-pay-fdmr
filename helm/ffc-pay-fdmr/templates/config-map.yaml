@@ -10,4 +10,5 @@ data:
   FDMR_STORAGE_CONNECTION_STRING: {{ quote .Values.container.fdmrStorageConnectionString }}
   FDMR_STORAGE_SHARE_NAME: {{ quote .Values.container.fdmrStorageShareName }}
   FDMR_STORAGE_FOLDER_NAME: {{ quote .Values.container.fdmrStorageFolder }}
+  ENABLED: {{ quote .Values.container.enabled }}
 {{- end -}}
