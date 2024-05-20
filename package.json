@@ -15,7 +15,8 @@
   },
   "author": "Defra",
   "contributors": [
-    "John Watson john.watson1@defra.gov.uk"
+    "John Watson john.watson1@defra.gov.uk",
+    "Leigh Godson leigh.godson.external@eviden.com"
   ],
   "license": "OGL-UK-3.0",
   "dependencies": {
