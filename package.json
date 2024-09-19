@@ -1,6 +1,6 @@
 {
   "name": "ffc-pay-fdmr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Transfer FDMR files",
   "homepage": "https://github.com/DEFRA/ffc-pay-fdmr",
   "main": "app/index.js",
@@ -20,9 +20,9 @@
   "license": "OGL-UK-3.0",
   "dependencies": {
     "@azure/identity": "^4.4.1",
-    "@azure/storage-blob": "12.13.0",
+    "@azure/storage-blob": "12.24.0",
     "@azure/storage-file-share": "12.9.0",
-    "applicationinsights": "2.8.0",
+    "applicationinsights": "3.3.0",
     "joi": "17.11.0",
     "log-timestamp": "0.3.0"
   },
