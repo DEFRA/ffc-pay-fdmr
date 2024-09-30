@@ -18,5 +18,5 @@ services:
       POLLING_INTERVAL: ${POLLING_INTERVAL:-10000}
 
   ffc-pay-fdmr-azurite:
-    image: mcr.microsoft.com/azure-storage/azurite:3.23.0
+    image: mcr.microsoft.com/azure-storage/azurite:3.32.0
     command: "azurite-blob --loose --blobHost 0.0.0.0"
