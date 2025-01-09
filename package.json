@@ -1,6 +1,6 @@
 {
   "name": "ffc-pay-fdmr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Transfer FDMR files",
   "homepage": "https://github.com/DEFRA/ffc-pay-fdmr",
   "main": "app/index.js",
