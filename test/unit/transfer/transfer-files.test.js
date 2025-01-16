@@ -2,7 +2,9 @@ jest.mock('../../../app/storage')
 const { getPaymentFiles: mockGetPaymentFiles } = require('../../../app/storage')
 
 jest.mock('../../../app/transfer/transfer-file')
-const { transferFile: mockTransferFile } = require('../../../app/transfer/transfer-file')
+const {
+  transferFile: mockTransferFile
+} = require('../../../app/transfer/transfer-file')
 
 const { transferFiles } = require('../../../app/transfer/transfer-files')
 

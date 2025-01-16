@@ -2,7 +2,11 @@ const Joi = require('joi')
 
 const schema = Joi.object({
   enabled: Joi.boolean().default(true),
-  connectionStr: Joi.string().when('useConnectionStr', { is: true, then: Joi.required(), otherwise: Joi.allow('').optional() }),
+  connectionStr: Joi.string().when('useConnectionStr', {
+    is: true,
+    then: Joi.required(),
+    otherwise: Joi.allow('').optional()
+  }),
   storageAccount: Joi.string().required(),
   useConnectionStr: Joi.boolean().default(false),
   createContainers: Joi.boolean().default(false),

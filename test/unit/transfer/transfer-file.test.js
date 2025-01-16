@@ -1,5 +1,9 @@
 jest.mock('../../../app/storage')
-const { downloadFile: mockDownloadFile, uploadFile: mockUploadFile, deleteFile: mockDeleteFile } = require('../../../app/storage')
+const {
+  downloadFile: mockDownloadFile,
+  uploadFile: mockUploadFile,
+  deleteFile: mockDeleteFile
+} = require('../../../app/storage')
 
 const { transferFile } = require('../../../app/transfer/transfer-file')
 

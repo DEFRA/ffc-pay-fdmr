@@ -43,8 +43,12 @@ jest.mock('@azure/storage-file-share', () => {
     }
   }
 })
-
-const { getPaymentFiles, downloadFile, uploadFile, deleteFile } = require('../app/storage')
+const {
+  getPaymentFiles,
+  downloadFile,
+  uploadFile,
+  deleteFile
+} = require('../app/storage')
 
 describe('storage', () => {
   beforeEach(() => {
