@@ -10,7 +10,9 @@ const schema = Joi.object({
   inboundFolder: Joi.string().required(),
   shareConnectionString: Joi.string().required(),
   shareName: Joi.string().required(),
-  fdmrFolder: Joi.string().required()
+  fdmrFolder: Joi.string().required(),
+  managedIdentityClientId: Joi.string().optional()
+
 })
 
 const config = {
@@ -23,7 +25,9 @@ const config = {
   inboundFolder: 'inbound',
   shareConnectionString: process.env.FDMR_STORAGE_CONNECTION_STRING,
   shareName: process.env.FDMR_STORAGE_SHARE_NAME,
-  fdmrFolder: process.env.FDMR_STORAGE_FOLDER_NAME
+  fdmrFolder: process.env.FDMR_STORAGE_FOLDER_NAME,
+  managedIdentityClientId: process.env.AZURE_CLIENT_ID
+
 }
 
 const result = schema.validate(config, {
