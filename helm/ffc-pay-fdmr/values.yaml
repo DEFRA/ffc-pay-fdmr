@@ -34,7 +34,7 @@ container:
   fdmrStorageFolder: outbound
   enabled: true
 
-aadPodIdentity: true
+workloadIdentity: true
 
 azureIdentity:
   clientID: not-a-real-clientID
