@@ -1,6 +1,6 @@
 {
   "name": "ffc-pay-fdmr",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Transfer FDMR files",
   "homepage": "https://github.com/DEFRA/ffc-pay-fdmr",
   "main": "app/index.js",
@@ -16,8 +16,8 @@
   "author": "Defra",
   "contributors": [
     "John Watson john.watson1@defra.gov.uk",
-    "Leigh Godson leigh.godson.external@eviden.com",
-    "Sam Plackett samuel.plackett@eviden.com"
+    "Leigh Godson leigh.godson@atos.net",
+    "Sam Plackett samuel.plackett@atos.net"
   ],
   "license": "OGL-UK-3.0",
   "dependencies": {
