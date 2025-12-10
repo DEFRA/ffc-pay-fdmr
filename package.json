@@ -1,6 +1,6 @@
 {
   "name": "ffc-pay-fdmr",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Transfer FDMR files",
   "homepage": "https://github.com/DEFRA/ffc-pay-fdmr",
   "main": "app/index.js",
@@ -8,7 +8,8 @@
     "pretest": "npm run test:lint",
     "test": "jest --runInBand --forceExit",
     "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand",
-    "test:lint": "standard",
+    "test:lint": "eslint",
+    "test:lint:fix": "eslint --fix",
     "test:debug": "node --inspect-brk=0.0.0.0 ./node_modules/jest/bin/jest.js --coverage=false --onlyChanged --watch --runInBand --no-cache",
     "start:watch": "nodemon --inspect=0.0.0.0 --ext js --legacy-watch app/index.js",
     "start:debug": "nodemon --inspect-brk=0.0.0.0 --ext js --legacy-watch app/index.js"
@@ -22,29 +23,18 @@
   "license": "OGL-UK-3.0",
   "dependencies": {
     "@azure/identity": "4.4.1",
-    "@azure/storage-blob": "12.13.0",
-    "@azure/storage-file-share": "12.9.0",
+    "@azure/storage-blob": "12.29.1",
+    "@azure/storage-file-share": "12.29.1",
     "applicationinsights": "2.9.6",
     "joi": "17.11.0",
     "log-timestamp": "0.3.0"
   },
   "devDependencies": {
+    "eslint": "9.39.1",
     "jest": "29.7.0",
     "jest-junit": "16.0.0",
-    "nodemon": "3.0.1",
-    "standard": "17.1.0"
-  },
-  "standard": {
-    "globals": [
-      "describe",
-      "beforeEach",
-      "expect",
-      "test",
-      "afterEach",
-      "jest",
-      "beforeAll",
-      "afterAll"
-    ]
+    "neostandard": "0.12.2",
+    "nodemon": "3.0.1"
   },
   "nodemonConfig": {
     "ignore": [
